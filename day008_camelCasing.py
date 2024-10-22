@@ -10,6 +10,7 @@ Examples
 import re
 
 
+########## 1st Solution ##########
 def to_camel_case(text):
     words = re.split('-|_', text)
     for i, word in enumerate(words):
@@ -22,3 +23,13 @@ def to_camel_case(text):
 print(to_camel_case("the-stealth-warrior"))
 print(to_camel_case("The_Stealth_Warrior"))
 print(to_camel_case("The_Stealth-Warrior"))
+
+
+########## 2nd Solution ##########
+def to_camel_case2(text):
+    return text[0]+''.join(text.title()[1:].replace('-', ' ').replace('_', ' ').split(' '))
+
+
+print(to_camel_case2("the-stealth-warrior"))
+print(to_camel_case2("The_Stealth_Warrior"))
+print(to_camel_case2("The_Stealth-Warrior"))
