@@ -1,10 +1,13 @@
-// Import CSV file
+const fs = require("fs");
+const csv = require("csv-parser");
 
+const FILEPATH = "convertcsv.csv";
 const json = {};
 
-function csv2jason(csv, separator) {
-  for (line of csv) {
-    const [title, category, description, value] = line.split(separator);
+fs.createReadStream(FILEPATH)
+  .pipe(csv())
+  .on("data", (row) => {
+    const { title, category, description, value } = row;
     const object = {
       [title]: {
         category: category,
@@ -13,16 +16,9 @@ function csv2jason(csv, separator) {
       },
     };
     Object.assign(json, object);
-  }
-}
+  })
+  .on("end", () => {
+    console.log(json);
+  });
 
 // Export JSON file
-
-const test = [
-  `title 1,category1,description1,value1`,
-  `title 2,category2,description2,value2`,
-  `title 3,category3,description3,value3`,
-];
-
-csv2jason(test, ",");
-console.log(json);
