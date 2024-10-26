@@ -18,7 +18,6 @@ fs.createReadStream(FILEPATH)
     Object.assign(json, object);
   })
   .on("end", () => {
-    console.log(json);
+    const jsonString = JSON.stringify(json);
+    fs.writeFileSync("data.json", jsonString);
   });
-
-// Export JSON file
