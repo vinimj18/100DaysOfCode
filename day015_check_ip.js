@@ -19,13 +19,12 @@ Inputs are guaranteed to be a single string
 //Steps:
 //1 - Split string
 //2 - Define Rules:
-//  . Cannot begin with 0
 //  . Have 4 octets
+//  . Cannot begin with 0
 //  . Must be a value between 0 and 255
 
 function isValidIP(str) {
   const octets = str.split(".");
-  console.log(str);
   if (octets.length !== 4) return false;
   const regexp = /^(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]?|0)$/;
   for (const octet of octets)
