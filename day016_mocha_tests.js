@@ -20,3 +20,5 @@ describe("tests to train my Mocha learning", function () {
     "Check if the square root of input multiplied by 5! is divisible by pi (TO BE IMPLEMENTED) XD"
   );
 });
+
+// npm test
