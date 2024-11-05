@@ -29,6 +29,8 @@ will always be the same.'''
 
 import re
 
+# Example 1
+
 
 def count_smileys(arr):
     smiley = r'[;:][-~]?[)D]'
@@ -37,6 +39,8 @@ def count_smileys(arr):
         if re.findall(smiley, item) != []:
             count += 1
     return count
+
+# Example 2
 
 
 def count_smileys2(arr):
