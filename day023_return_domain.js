@@ -37,3 +37,13 @@ console.log(domainName("http://www.zombie-bites.com"));
 console.log(domainName2("http://www.zombie-bites.com"));
 console.log(domainName("http://github.com/carbonfive/raygun"));
 console.log(domainName2("http://github.com/carbonfive/raygun"));
+console.log(
+  domainName(
+    "https://github.com/vinimj18/100DaysOfCode/blob/main/day023_return_domain.js"
+  )
+);
+console.log(
+  domainName2(
+    "https://github.com/vinimj18/100DaysOfCode/blob/main/day023_return_domain.js"
+  )
+);
