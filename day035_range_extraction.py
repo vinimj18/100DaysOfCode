@@ -25,7 +25,6 @@ def solution(args):
         else:
             ranged_list.append(internal_range)
             internal_range = [arg]
-
         if i == len(args) - 1:  # Add the last range at the end of the loop
             ranged_list.append(internal_range)
 
