@@ -71,10 +71,11 @@ class PaginationHelper:
                     page += 1
 
 
-collection = ['a', 'b', 'c', 'd', 'e', 'f']
+collection = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+              23, 24,]
 collection2 = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 collection3 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
-helper = PaginationHelper(collection, 4)
+helper = PaginationHelper(collection, 10)
 helper2 = PaginationHelper(collection2, 4)
 helper3 = PaginationHelper(collection3, 4)
 
@@ -92,3 +93,4 @@ print(helper3.page_index(6))
 print(helper3.page_index(7))
 print(helper3.page_index(8))
 print(helper3.page_index(-10))
+print(helper.page_index(22))
