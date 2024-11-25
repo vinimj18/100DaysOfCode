@@ -8,8 +8,7 @@ contains a digit
 only contains alphanumeric characters (note that '_' is not alphanumeric)*/
 
 // assign your RegExp to REGEXP:
-const REGEXP = /[0-9a-zA-Z]/;
+const REGEXP = /^(?=.*[\d])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{6,}$/g;
 
-console.log(REGEXP.test("123456"));
-console.log(REGEXP.test("abcdef"));
-console.log(REGEXP.test("ABCDEF"));
+abcdefghijklmnopqrstuvwxyz;
+12345678910;
