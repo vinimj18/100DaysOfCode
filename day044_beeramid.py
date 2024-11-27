@@ -21,17 +21,13 @@ For example:
 beeramid(1500, 2); // should === 12
 beeramid(5000, 3); // should === 16'''
 
-import math
-
 
 def beeramid(bonus, price):
     beers = bonus//price
     level = 0
-
     while beers >= (level+1) ** 2:
         level += 1
         beers -= level ** 2
-
     return level
 
 
