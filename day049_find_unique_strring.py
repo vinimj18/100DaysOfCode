@@ -11,8 +11,8 @@ It’s guaranteed that array contains more than 2 strings.
 
 This is the first kata in series:
 
-Find the unique number (this kata)
-Find the unique string
+Find the unique number 
+Find the unique string (this kata)
 Find The Unique'''
 
 
