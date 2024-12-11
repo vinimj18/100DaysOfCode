@@ -20,7 +20,7 @@ e.g. 2 heads and 1 body = 2 dead ants, not 3'''
 
 
 def dead_ant_count(ants):
-    return max([ants.count('a'), ants.count('n'), ants.count('t')])-ants.count('ant')
+    return max([ants.count('a'), ants.count('n'), ants.count('t')]) - ants.count('ant')
 
 
 # Test cases
