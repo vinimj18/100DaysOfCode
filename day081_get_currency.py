@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 # Function that uses WISE API to get excange rates
 
 
-def get_conversion_rate(source, target):
+def get_conversion_rate(source: str, target: str):
     # URL of the webpage you want to fetch
     url = f"https://api.sandbox.transferwise.tech/v1/rates?source={
         source}&target={target}"
@@ -22,13 +22,13 @@ def get_conversion_rate(source, target):
 
     # Check the status code
     if response.status_code == 200:
-        return (response.text)
+        return response.json()[0]['rate']
     else:
         print(f"Failed to GET content. Status code: {response.status_code}")
 
 
-# Currencies to Convert
-source = 'EUR'
-target = 'BRL'
+if __name__ == '__main__':
 
-print(get_conversion_rate(source, target))
+    source = 'EUR'
+    target = 'USD'
+    print(get_conversion_rate(source, target))
