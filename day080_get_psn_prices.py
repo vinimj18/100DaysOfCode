@@ -26,11 +26,6 @@ def get_psn_prices(game_link: str, stores: dict):
         # Adjusts the given link to match selected store
         driver.get(game_link[:30] + store + game_link[35:])
 
-        # Gets the game name to be used as key on my returned dictionary
-        game_name = wait.until(EC.visibility_of_element_located((
-            By.CSS_SELECTOR, '.psw-m-b-5'))
-        ).text
-
         # Gets the price of the game at each store
         price_element = wait.until(EC.visibility_of_element_located((
             By.CSS_SELECTOR, '.psw-t-title-m.psw-m-r-4'))
